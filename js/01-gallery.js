@@ -24,6 +24,7 @@ const itemsList = galleryItems
   .join("");
 
 const gallery = document.querySelector(".gallery");
+
 gallery.insertAdjacentHTML("afterbegin", itemsList);
 
 gallery.addEventListener("click", onClick);
@@ -31,7 +32,7 @@ gallery.addEventListener("click", onClick);
 function onClick(e) {
   e.preventDefault();
   const img = basicLightbox.create(`
-    <img src="${e.target.dataset.source}" width="800" height="600" data-esc="false">
+    <img src=${e.target.dataset.source} width="800" height="600" />
 `);
   img.show();
   gallery.addEventListener("keydown", (e) => {
