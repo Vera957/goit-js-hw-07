@@ -24,12 +24,10 @@ const imgMarkup = galleryItems
 gallery.insertAdjacentHTML("beforeend", imgMarkup);
 
 let lightbox = new SimpleLightbox(".gallery a", {
-  captionsData: "alt",
   captionDelay: 250,
-});
-
-gallery.removeEventListener("mousewheel", () => {
-  return;
+  captionsData: "alt",
+  overlayOpacity: 0.9,
+  scrollZoom: false,
 });
 
 //console.log(navigator.userAgent, navigator.appVersion, navigator.userAgentData);
