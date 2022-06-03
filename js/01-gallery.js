@@ -38,11 +38,15 @@ function onClick(e) {
     <img src=${e.target.dataset.source} width="800" height="600" />
 `);
   img.show();
-  gallery.addEventListener("keydown", (e) => {
+  
+  gallery.addEventListener("keydown", function esc(e) {
+    console.log(e);
     if (e.key === "Escape") {
       img.close();
+      gallery.removeEventListener('keydown', esc)
     }
   });
 }
-console.log(navigator.userAgentData);
+//console.log(navigator.userAgentData);
+
 
