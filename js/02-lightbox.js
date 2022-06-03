@@ -18,11 +18,6 @@ const imgMarkup = galleryItems
   .join("");
 
 gallery.insertAdjacentHTML('beforeend', imgMarkup);
-console.log(imgMarkup)
-//const alt = document.querySelector('gallery__image');
-
-
-
     
     let lightbox = new SimpleLightbox(".gallery a", {
       /* options */
@@ -32,9 +27,8 @@ console.log(imgMarkup)
       captionDelay: 250,
     });
 
-    console.log(lightbox.options);
 
-
+console.log(navigator.userAgentData);
 
 
 
